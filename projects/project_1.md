@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 2
+title: Project 1
 author: Jonathan Lam
 featured_img: /assets/img/template.png
 ---

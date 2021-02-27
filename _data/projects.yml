@@ -1,0 +1,12 @@
+- name: project_1
+  link: /projects/project_1.html
+  project_description: Project 1 is a project with a description.
+  project_img: /assets/template.png
+- name: project_2
+  link: /projects/project_2.html
+  project_description: Project 2 is a project with a description.
+  project_img: /assets/template.png
+- name: project_3
+  link: /projects/project_3.html
+  project_description: Project 3 is a project with a description.
+  project_img: /assets/template.png
