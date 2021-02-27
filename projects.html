@@ -1,12 +1,14 @@
 ---
 layout: default 
+title: Projects
 ---
-<div class="p-3 text-center bg-image" style=" background-image: url('assets/home_background.png'); height: 300px; background-size: cover; padding-bottom: 100px">
+<div class="p-5 text-center bg-image" style=" background-image: url('assets/img/home_background.png'); height: 300px; background-size: cover; padding-bottom: 100px">
 	<div>
 		<h3 class="display-1 text-center text-white">Projects</h3>
 	</div>
 </div>
 
+<div class="row pt-3">
 <div class="card-deck jumbotron p-5">
 	{% for item in site.data.projects %}
 	<div class="card">
@@ -17,4 +19,5 @@ layout: default
 		</div>
 	</div>
 	{% endfor %}
+</div>
 </div>

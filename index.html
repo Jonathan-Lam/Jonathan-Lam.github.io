@@ -2,15 +2,14 @@
 layout: default
 title: Home
 ---
-
-<div class="p-5-offset- text-center bg-image" style=" background-image: url('assets/home_background.png'); height: 300px; background-size: cover; padding-bottom: 100px">
+<div class="p-5-offset- text-center bg-image" style=" background-image: url('assets/img/home_background.png'); height: 300px; background-size: cover; padding-bottom: 100px">
 	<div>
 		<h3 class="display-1 text-center text-white"><br><u>[ Jonathan Lam ]</u></h3>
 	</div>
 </div>
 
-<div class="row justify-content-center">
-	<div class="col-sm col-md-8 col-lg-8 pt-5">
+<div class="row justify-content-center pt-4">
+	<div class="col-sm col-md-8 col-lg-8">
 		{%- if site.posts.size > 0 -%}
 		<ul class="jumbotron" style="list-style-type:none">
 		{%- for post in site.posts limit:3 -%}
@@ -31,7 +30,26 @@ title: Home
 		{%- endfor -%}
 		</ul>
 		{%- endif -%}
+	</div>
+	<div class="col-md-4">
+		<h2>Tags</h2>
+		<table class="table border">
+			<tbody>
+			{% assign sorted_tags = site.tags | sort %}
+			{% for tag in sorted_tags %}
+			{% assign t = tag | first %}
+			{% assign posts = tag | last %}
+				<tr>
+					<td><a href="/tags/# {{ "{{ t | downcase | replace:' ','-'" }}}}">{{ t | downcase | replace:' ','-' }}</a>
+					<span class="text-secondary">({{ posts | size }})</span></td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
 </div>
+		
+
 
 <!--
 
