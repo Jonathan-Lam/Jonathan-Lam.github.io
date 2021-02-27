@@ -2,5 +2,5 @@ url: "https://jonathan-lam.github.io" # the base hostname & protocol for your si
 baseurl: "" # the subpath of your site, e.g. /blog
 title: Jonathan Lam # the name of your site, e.g. ACME Corp.
 sass:
-    sass_dir: _scss
+    sass_dir: scss
     style: compressed
