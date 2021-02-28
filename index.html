@@ -19,7 +19,7 @@ title: Home
 			{{ post.title | escape }}
 			</h3>
 			<span class="post-meta text-secondary">{{ post.date | date: date_format }}</span>
-			<img src="{{ post.featured_img }}" class="img-fluid">
+			<img src="{{ post.featured_img }}" class="img-fluid border">
 			{{ post.excerpt }}
 			<div class="text-right">
 				<a class="post-link" href="{{ post.url | relative_url }}">Read Full Post

@@ -1,12 +1,8 @@
-- name: project_1
-  link: /projects/project_1.html
-  project_description: Project 1 is a project with a description.
-  project_img: /assets/img/template.png
-- name: project_2
-  link: /projects/project_2.html
-  project_description: Project 2 is a project with a description.
-  project_img: /assets/img/template.png
-- name: project_3
-  link: /projects/project_3.html
-  project_description: Project 3 is a project with a description.
+- name: Personal Website
+  link: /projects/personal-website.html
+  project_description: Exploring front end tools like Jekyll and Bootstrap by creating a personal website.
+  project_img: /assets/img/website/working-on-this-website-part-1.png
+- name: Placeholder
+  link: /projects/personal-website.html
+  project_description: Template project for now.
   project_img: /assets/img/template.png

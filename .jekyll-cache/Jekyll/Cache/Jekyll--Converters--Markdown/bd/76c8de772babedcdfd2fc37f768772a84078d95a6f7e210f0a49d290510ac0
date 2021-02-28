@@ -1,0 +1,60 @@
+I"�	<p>I’ve spent some time learning/working on this website using Jekyll and Bootstrap 4. Through a mixture of documentation, trial and error, and perseverance, I at least have a basic layout of what details I want to display on this site. However, I did get caught up on one details; how to highlight the navbar link depending on the current page. I figured I would show how I did to impart this knowledge to fellow front end web developer learners. I assume the reader has some experience with Jekyll already.</p>
+
+<p>The website is organized as follows:</p>
+<ul>
+  <li>_layouts
+    <ul>
+      <li>default.html</li>
+      <li>post.html</li>
+      <li>project.html</li>
+    </ul>
+  </li>
+  <li>_includes
+    <ul>
+      <li>footer.html</li>
+      <li>header.html</li>
+      <li>navbar.html</li>
+    </ul>
+  </li>
+  <li>_data
+    <ul>
+      <li>navbar.yml</li>
+      <li>projects.yml</li>
+    </ul>
+  </li>
+  <li>index.html</li>
+  <li>…other files</li>
+</ul>
+
+<p>Layouts hold default.html, which uses the header, navbar, and fotoer in _includes. Here is a code snippet from navbar.html. The Liquid syntax has the % removed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;div class="collapse navbar-collapse" id="navbarResponsive"&gt;
+    &lt;ul class="navbar-nav ml-auto"&gt;
+	{ for item in site.data.navbar }
+		{ if page.url == item.link }
+		&lt;li class="nav-item active"&gt;
+			&lt;a class="nav-link" href=""&gt;&lt;u&gt;&lt;/u&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		{ else }
+		&lt;li class="nav-item"&gt;
+			&lt;a class="nav-link" href=""&gt;&lt;/a&gt;
+		&lt;/li&gt;
+		{ endif }
+	{ endfor }
+    &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre></div></div>
+
+<p>The site.data.navbar references a YAML file shown below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> - name: Home
+  link: /
+- name: Projects
+  link: /projects.html
+- name: About
+  link: /about.html
+</code></pre></div></div>
+
+<p>I use the navbar.yml file to store the name and links to the other pages. If the current URL matches the navbar link, we use the “nav_item active” classes to illuminate the link in the navbar, as well as underline it. Otherwise, the link is made without the active class. One downside of course is that we need to update the navbar.yml file if we want to add more links to the navbar. Perhaps there is a way to automatically iterate through a directory and insert the page title and link. If there is, please let me know!</p>
+
+:ET
