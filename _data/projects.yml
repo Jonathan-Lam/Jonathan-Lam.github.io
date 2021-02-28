@@ -1,7 +1,7 @@
 - name: Personal Website
   link: /projects/personal-website.html
   project_description: Exploring front end tools like Jekyll and Bootstrap by creating a personal website.
-  project_img: /assets/img/template.png
+  project_img: /assets/img/website/working-on-this-website-part-1.png
 - name: Placeholder
   link: /projects/personal-website.html
   project_description: Template project for now.
